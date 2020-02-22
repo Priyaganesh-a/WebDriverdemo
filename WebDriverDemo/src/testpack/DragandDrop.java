@@ -15,6 +15,8 @@ public class DragandDrop {
 		driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
 		WebElement drag = driver.findElement(By.id("draggable"));
 		WebElement drop = driver.findElement(By.id("droppable"));
+		//Actions is used for mouse actions
+		
 		Actions act = new Actions(driver);
 		act.dragAndDrop(drag, drop).perform();
 		Thread.sleep(3000);
